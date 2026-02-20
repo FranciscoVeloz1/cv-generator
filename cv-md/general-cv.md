@@ -92,9 +92,9 @@ Results-driven Full Stack Developer and Data Engineer with over 8 years of exper
 
 ## Education
 
-### Self-Taught Software Developer
+### Bachelor's Degree in Computer Systems Engineering
 
-**Independent Study & Online Learning** | México | 2017 - Present
+**Tecnológico Superior de Jalisco** | Lagos de Moreno, Jalisco, México | 2018 - 2022
 
 - Relevant Coursework: Full Stack Web Development, Data Engineering, Mobile Development with React Native, AI and Blockchain Integration
 
@@ -113,6 +113,7 @@ Results-driven Full Stack Developer and Data Engineer with over 8 years of exper
 
 - **Databricks: Delta Lake Architecture** | Platzi | Jan 2025
 - **Project Management Fundamentals** | Platzi | Oct 2023
+- **GESE (Graded Examinations in Spoken English)** | United Languages - Trinity College London | Nov 2023
 - **Python: PIP and Virtual Environments** | Platzi | Oct 2023
 - **React.js Practical Course** | Platzi | Feb 2022
 - **Next.js: Authentication** | Platzi | Feb 2022
