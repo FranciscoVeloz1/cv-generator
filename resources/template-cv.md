@@ -1,7 +1,7 @@
 <!--
   CV TEMPLATE - placeholder-only skeleton.
   Source of truth: resume-data-source/index.json
-  Placeholder syntax, selection rules, and writing guidance: resources/cv-guidelines.md
+  Placeholder syntax, selection rules, and writing guidance: .cursor/rules/cv-generation.mdc
   Do not put real data in this file.
 -->
 
@@ -9,7 +9,7 @@
 
 {{profile.headline}}
 
-{{profile.location}} | {{profile.phone}} | {{profile.email}} | {{socialNetworks[platform=LinkedIn].link}} | {{socialNetworks[platform=GitHub].link}} | {{profile.website}}
+{{profile.location}} | {{profile.phone}} | [{{profile.email}}](mailto:{{profile.email}}) | [LinkedIn]({{socialNetworks[platform=LinkedIn].link}}) | [GitHub]({{socialNetworks[platform=GitHub].link}}) | [Portfolio]({{profile.website}})
 
 ---
 
@@ -45,7 +45,7 @@
 
 **Technologies:** {{projects[].skills -> skills.name, joined}}
 
-{{projects[].description}} ({{projects[].repo}})
+{{projects[].description}} ([GitHub]({{projects[].repo}}))
 
 ## Education
 

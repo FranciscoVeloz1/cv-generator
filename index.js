@@ -27,6 +27,9 @@ async function convert() {
     const pdf = await mdToPdf(
       { path: inputPath },
       {
+        launch_options: {
+          args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        },
         stylesheet: [],
         css: `
         body {
