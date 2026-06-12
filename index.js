@@ -2,16 +2,14 @@ const { mdToPdf } = require("md-to-pdf");
 const path = require("path");
 const fs = require("fs");
 
-const CV_DIR = path.resolve(__dirname, "..", "cv-md");
-const RESULTS_DIR = path.resolve(__dirname, "..", "results");
+const CV_DIR = path.resolve(__dirname, ".", "cv-md-files");
+const RESULTS_DIR = path.resolve(__dirname, ".", "results");
 
 async function convert() {
-  const files = fs
-    .readdirSync(CV_DIR)
-    .filter((file) => file.endsWith(".md"));
+  const files = fs.readdirSync(CV_DIR).filter((file) => file.endsWith(".md"));
 
   if (files.length === 0) {
-    console.log("No markdown files found in cv-md/");
+    console.log("No markdown files found in cv-md-files/");
     process.exit(1);
   }
 
@@ -26,9 +24,11 @@ async function convert() {
 
     console.log(`Converting: ${file} -> results/${outputName}`);
 
-    const pdf = await mdToPdf({ path: inputPath }, {
-      stylesheet: [],
-      css: `
+    const pdf = await mdToPdf(
+      { path: inputPath },
+      {
+        stylesheet: [],
+        css: `
         body {
           font-family: "Helvetica Neue", Arial, sans-serif;
           font-size: 9pt;
@@ -45,17 +45,18 @@ async function convert() {
         hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
         strong { color: #1a1a1a; }
       `,
-      pdf_options: {
-        format: "A4",
-        margin: {
-          top: "12mm",
-          bottom: "12mm",
-          left: "12mm",
-          right: "12mm",
+        pdf_options: {
+          format: "A4",
+          margin: {
+            top: "12mm",
+            bottom: "12mm",
+            left: "12mm",
+            right: "12mm",
+          },
+          printBackground: true,
         },
-        printBackground: true,
       },
-    });
+    );
 
     if (pdf) {
       fs.writeFileSync(outputPath, pdf.content);
