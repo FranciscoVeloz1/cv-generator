@@ -57,6 +57,8 @@ const PDF_OPTIONS = {
         li { margin-bottom: 2px; }
         hr { border: none; border-top: 1px solid #ddd; margin: 12px 0; }
         strong { color: #1a1a1a; }
+        h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+        h3 + p { break-after: avoid; page-break-after: avoid; }
       `,
   pdf_options: {
     format: "A4",
